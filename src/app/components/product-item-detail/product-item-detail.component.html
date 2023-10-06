@@ -1,0 +1,15 @@
+<div class="detail-container">
+    <img class="img" [src]="product.url"/>
+    <div class="detail-item">
+        <span class="detail-content product-name">{{ product.name }}</span>
+        <span class="detail-content product-price">{{ product.price }}$</span>
+        <span class="detail-content product-description">{{ product.description }}</span>
+        <div class="detail-content add-cart">
+            <mat-icon class="icon" (click)="remove()">remove_circle_outline</mat-icon>
+            <input type="number" class="select-input" [value]="quantity" />
+            <mat-icon class="icon" (click)="add()">add_circle_outline</mat-icon>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="addToCart()">Add to Cart</button>
+        <a class="back-link" routerLink='/'><mat-icon>keyboard_backspace</mat-icon> Back to list</a>
+    </div>
+</div>

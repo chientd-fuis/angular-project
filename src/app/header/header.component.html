@@ -1,0 +1,8 @@
+<div class="header">
+    <h2>Udacity Store</h2>
+    <div class="menu">
+        <a routerLink='/'><mat-icon>home</mat-icon><span>Home</span></a>
+        <a routerLink='/cart'><mat-icon>shopping_cart</mat-icon><span [matBadge]="service.getCarts().length? service.getCarts().length: ''" matBadgeColor="warn">Cart</span></a>
+    </div>
+</div>
+

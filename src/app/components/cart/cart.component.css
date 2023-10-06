@@ -1,45 +1,93 @@
 img {
-  width: 100px;
-  border-radius: 10px;
-}
+    width: 100px;
+    border-radius: 10px;
+  }
+  
+  .form-margin {
+    margin-bottom: 12px;
+  }
+  
+  .cart-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  
+  .cart-item-details {
+    display: flex;
+    justify-content: space-evenly;;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 80px;
+  }
+  
+  .number-input {
+    width: 80px;
+    text-align: center;
+  }
+  
+  .cart-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 64px;
+  }
+  .form-container {
+    margin-top: 72px;
+    width: 60%;
+    height: 400px;
+  }
 
-.form-margin {
-  margin-bottom: 12px;
-}
+  .form-group {
+    margin-bottom: 32px;
+  }
+  
+  .cart-panel {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .empty-cart-message {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
 
-.cart-item {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 20px;
-}
+  .product-name {
+    font-size: 24px;
+    font-weight: bold;
+    max-width: 200px;
+    word-wrap: break-word;
+  }
+  .select-input {
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 18px;
+    border: none;
+    text-align: center;
+    max-width: 48px;
+  }
 
-.cart-item-details {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: left;
-  margin-left: 80px;
-}
+  .add-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+  }
 
-.number-input {
-  width: 80px;
-  text-align: center;
-}
+  .total {
+    font-size: 32px;
+    font-weight: bold;
+  }
 
-.cart-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 64px;
-}
-
-.cart-panel {
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
-.empty-cart-message {
-  display: flex;
-  justify-content: center;
-  margin-top: 64px;
-}
+  .cart-message{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+  }

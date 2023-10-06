@@ -1,0 +1,34 @@
+
+
+  .form-group {
+    margin-bottom: 32px;
+  }
+  
+
+  .product-name {
+    font-size: 24px;
+    font-weight: bold;
+    max-width: 200px;
+    word-wrap: break-word;
+  }
+  .select-input {
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 18px;
+    border: none;
+    text-align: center;
+    max-width: 48px;
+  }
+
+  .total {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .cart-message{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+  }
