@@ -7,9 +7,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./buyer-information.component.css']
 })
 export class BuyerInformationComponent implements OnInit {
-
-  createForm: FormGroup;
   isSubmitted: boolean = false;
+  createForm: FormGroup;
+
   @Output() checkout = new EventEmitter();
 
   constructor(private fb: FormBuilder){}
@@ -17,21 +17,11 @@ export class BuyerInformationComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm = this.fb.group({
-      fullname: ['', [Validators.required]],
-      address: ['', [Validators.required]],
+      fullname: ['', [Validators.required, Validators.maxLength(55)]],
+      address: ['', [Validators.required, Validators.maxLength(200)]],
       creditcard: ['', [Validators.required, Validators.maxLength(16)]],
     });
   }
-  get creditcard() {
-    return this.createForm.get('creditcard');
-  }
-  get fullname() {
-    return this.createForm.get('fullname');
-  }
-  get address() {
-    return this.createForm.get('address');
-  }
-  
 
   onSubmit() {
     this.isSubmitted = true;

@@ -11,9 +11,9 @@ export class ConfirmationComponent implements OnInit{
   total: number = 0;
   constructor(private router: ActivatedRoute) {}
   ngOnInit(): void {
-    const {fullname, total} = this.router.snapshot.params;
-    this.fullname = fullname;
-    this.total = total;
+    this.fullname = this.router.snapshot.queryParamMap.get('name') || '';
+    const totalPrice = this.router.snapshot.queryParamMap.get('total') || '0';
+    this.total = parseFloat(totalPrice);
   }
 
 

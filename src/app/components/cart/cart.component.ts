@@ -50,6 +50,6 @@ export class CartComponent implements OnInit {
 
   onSubmit = (value: any) => {
     window.localStorage.clear();
-    this.router.navigate([`/success/${value.fullname}/${this.total}`]);
+    this.router.navigate([`/success`], {queryParams: { name: value.fullname, total: this.total}});
   }
 }

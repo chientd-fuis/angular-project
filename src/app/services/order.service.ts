@@ -35,7 +35,6 @@ export class OrderService {
       this.product.push(product);
       newList = this.product;
     }
-    console.log(newList)
     this.storage.setItem('products', JSON.stringify(newList));
   }
 
