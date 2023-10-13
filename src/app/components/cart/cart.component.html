@@ -5,11 +5,7 @@
             <div class="cart-item-details">
                 <span class="product-name">{{item.name}}</span>
                 <span class="product-price">{{item.price}}$</span>
-                <div class="add-cart">
-                    <mat-icon  (click)="remove(item.id)">remove_circle_outline</mat-icon>
-                    <input class="select-input" [value]="item.quantity" name="quantity" readonly/>
-                    <mat-icon (click)="add(item.id)">add_circle_outline</mat-icon>
-                </div>
+                    <app-cart-item (updateTotal)="onUpdateTotal()" [cartItem]="item"></app-cart-item>
             </div>
         </div>
         <div class="total">

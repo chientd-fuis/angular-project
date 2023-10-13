@@ -18,6 +18,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BuyerInformationComponent } from './components/buyer-information/buyer-information.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductItemComponent,
     ProductListComponent,
     BuyerInformationComponent,
+    CartItemComponent,
   ],
   imports: [
     BrowserModule,

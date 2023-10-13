@@ -39,6 +39,7 @@ export class OrderService {
   }
 
   update(product: ProductCart) {
+    this.product = JSON.parse(this.storage.getItem('products') || '[]') ;
     const item = this.product.find(p => p.id === product.id);
     let newList;
     if(item) {

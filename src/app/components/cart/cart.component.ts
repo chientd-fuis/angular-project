@@ -17,34 +17,11 @@ export class CartComponent implements OnInit {
   }
   ngOnInit(): void {
     this.carts = this.orderService.getCarts();
-    this.onTotal();
-  }
-  
-  add(productId: number) {
-    const item = this.carts.find(p => p.id === productId);
-    if(item) {
-      item.quantity = item.quantity + 1;
-      this.orderService.update(item)
-      this.onTotal();
-    }
+    this.onUpdateTotal();
   }
 
-  remove(productId: number) {
-    const item = this.carts.find(p => p.id === productId);
-    if(item) {
-      
-        item.quantity = item.quantity - 1;
-        this.orderService.update(item)
-        this.onTotal();
-        if(item.quantity <= 0){
-          this.refresh();
-        }
-    }
-  }
-
-  refresh = () => window.location.reload();
-
-  onTotal() {
+  onUpdateTotal() {
+    this.carts = this.orderService.getCarts();
     this.total = this.carts.map( item => item.price * item.quantity).reduce((partialSum, a) => partialSum + a, 0);
   }
 
